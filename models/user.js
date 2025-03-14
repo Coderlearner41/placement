@@ -14,7 +14,6 @@ const UserSchema = new mongoose.Schema({
     yearOfAdmission: { type: String },
     yearOfGraduation: { type: String },
     createdAt: { type: Date, default: Date.now },
-    fcmToken: { type: String, required: false }
 });
 
 module.exports = mongoose.model('User', UserSchema);

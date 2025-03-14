@@ -21,7 +21,9 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
 });
-
+app.get('/',(req,res)=>{
+    res.send('Hello World');
+})
 // Start WebSocket Server
 startWebSocketServer(server);
 

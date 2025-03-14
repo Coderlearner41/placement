@@ -1,5 +1,5 @@
 const User = require('../models/user');
-const Company = require('../models/Company');
+const Company = require('../models/company');
 const { sendNotificationToDepartment } = require('../websocket');
 
 exports.registerCompany = async (req, res) => {

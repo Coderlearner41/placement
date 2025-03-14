@@ -79,7 +79,7 @@ exports.login = async (req, res) => {
         res.json({ token, user: { name: user.name, rollNumber: user.rollNumber } });
     } catch (error) {
         res.status(500).json({ error: error.message });
-    }
+    }}
 exports.getuser = async (req, res) => {
     try {
         const { rollNumber } = req.body;
@@ -90,9 +90,9 @@ exports.getuser = async (req, res) => {
         if (!user) {
             return res.status(400).json({ msg: 'User not found' });
         }
-        res.json({ user: { user } });
+        res.json({ user });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 }
-};
+
